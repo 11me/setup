@@ -12,6 +12,11 @@ Options:
 DOC
 }
 
+mint() {
+  dconf load /org/cinnamon/ < "$HOME/dotfiles/.cinnamon-settings"
+  dconf load /org/gnome/terminal/ < "$HOME/dotfiles/.org-gnome-terminal"
+}
+
 execute() {
   __path="$PWD/$1"
 
@@ -57,11 +62,18 @@ install_dot() {
 
 case "$1" in
   --deb)
-      execute "deb";;
+      execute "deb"
+      ;;
   --arch)
-      echo arch;;
+      echo arch
+      ;;
   --dot)
-      install_dot;;
+      install_dot
+      ;;
+  --restore-mint)
+      mint
+      ;;
   *)
-      help;;
+      help
+      ;;
 esac
