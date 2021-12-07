@@ -6,9 +6,10 @@ Usage:
   ./install.sh <OPTION>
 
 Options:
-  --deb  - install for debian based distributions
-  --arch - install for archlinux based distributions
-  --dot  - install dotfiles
+  --deb          - install for debian based distributions
+  --arch         - install for archlinux based distributions
+  --dot          - install dotfiles
+  --restore-mint - restore linux mint settings
 DOC
 }
 
