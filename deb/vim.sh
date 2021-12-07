@@ -16,4 +16,7 @@ else
   [[ ! -d $PWD/dwns ]] && mkdir -p $PWD/dwns
   git clone git@github.com:vim/vim.git $PWD/dwns/vim
   cd $PWD/dwns/vim/src && reconfigure && sudo make
+
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
