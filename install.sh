@@ -58,6 +58,7 @@ install_dot() {
   create_link "$dotfiles/.local/bin" "$HOME/.local/bin"
   create_link "$dotfiles/.bashrc" "$HOME/.bashrc"
   create_link "$dotfiles/.dircolors" "$HOME/.dircolors"
+  create_link "$dotfiles/.local/share/fonts" "$HOME/.local/share/fonts"
 
 }
 
