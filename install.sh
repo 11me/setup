@@ -40,7 +40,7 @@ execute() {
 }
 
 create_link() {
-  echo "Linking: $1 -> $2" && ln -sf $1 $2
+  echo "Linking: $2 -> $1" && ln -sf "$1" "$2"
 }
 
 install_dot() {
