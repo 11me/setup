@@ -6,15 +6,19 @@ Usage:
   ./install.sh <OPTION>
 
 Options:
-  --deb          - install for debian based distributions
-  --arch         - install for archlinux based distributions
-  --dot          - install dotfiles
-  --restore-mint - restore linux mint settings
+  --deb                - install for debian based distributions
+  --arch               - install for archlinux based distributions
+  --dot                - install dotfiles
+  --restore-cinnamon   - restore cinnamon settings
+  --restore-gnome-term - restore gnome terminal settings
 DOC
 }
 
 mint() {
   dconf load /org/cinnamon/ < "$HOME/dotfiles/.cinnamon-settings"
+}
+
+gnome_term() {
   dconf load /org/gnome/terminal/ < "$HOME/dotfiles/.org-gnome-terminal"
 }
 
@@ -74,6 +78,9 @@ case "$1" in
       ;;
   --restore-mint)
       mint
+      ;;
+  --restore-gnome-term)
+      gnome_term
       ;;
   *)
       help
